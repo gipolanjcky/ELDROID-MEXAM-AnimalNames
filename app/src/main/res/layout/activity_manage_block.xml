@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageBlockActivity">
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:src="@drawable/back_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:text="Manage Block Animals"
+        android:id="@+id/animalTitle"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/backButton"
+        android:layout_marginStart="8dp"
+        android:textSize="22sp" />
+
+    <ListView
+        android:id="@+id/animalListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/animalTitle" />
+
+</RelativeLayout>
