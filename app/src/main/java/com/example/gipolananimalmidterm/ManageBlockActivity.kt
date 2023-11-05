@@ -18,8 +18,8 @@ class ManageBlockActivity : AppCompatActivity() {
         // Get a reference to the ListView
         val animalListView: ListView = findViewById(R.id.animalListView)
 
-        // Define a list of blocked animal names (replace with your data)
-        val blockedAnimalNames = arrayOf("Lion", "Elephant", "Giraffe")
+        // Define a list of blocked animal names
+        val blockedAnimalNames = mutableListOf("Antilope")
 
         // Create a custom adapter to display the blocked animal names with an "Unblock" button
         val adapter = BlockedAnimalAdapter(this, blockedAnimalNames)
@@ -31,7 +31,7 @@ class ManageBlockActivity : AppCompatActivity() {
 
 class BlockedAnimalAdapter(
     private val context: AppCompatActivity,
-    private val blockedAnimalNames: Array<String>
+    private val blockedAnimalNames: MutableList<String>
 ) : ArrayAdapter<String>(context, 0, blockedAnimalNames) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -53,7 +53,6 @@ class BlockedAnimalAdapter(
                 notifyDataSetChanged() // Notify the adapter that the data set has changed
             } catch (e: IndexOutOfBoundsException) {
                 // Handle the case where the position is out of bounds
-                // You can display a message or log the error here
                 e.printStackTrace()
             }
         }

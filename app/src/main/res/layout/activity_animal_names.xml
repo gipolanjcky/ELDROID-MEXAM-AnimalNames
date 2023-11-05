@@ -8,16 +8,21 @@
 
     <TextView
         android:text="Animal names from A to Z"
+        android:id="@+id/animalNamesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textSize="20sp"/>
 
-    <ListView
-        android:id="@+id/animalListView"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/nameListView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/manageBlockAnimalsButton" />
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Animal Name"
+        android:layout_below="@+id/animalNamesTitle" />
 
     <Button
         android:id="@+id/manageBlockAnimalsButton"

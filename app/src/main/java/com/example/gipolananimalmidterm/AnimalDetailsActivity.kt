@@ -6,33 +6,42 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.content.Intent
+import android.widget.ImageButton
+import com.example.gipolananimalmidterm.databinding.ActivityAnimalNamesBinding
 
 class AnimalDetailsActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAnimalNamesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animal_details)
 
-        val animalTitle: TextView = findViewById(R.id.animalTitle)
+        val nameTextView: TextView = findViewById(R.id.nameTextView)
         val animalDescription: TextView = findViewById(R.id.animalDescription)
         val blockAnimalButton: Button = findViewById(R.id.blockAnimalButton)
 
         // Set the animal details
-        val animalName = "Lion" // Replace with the name of the selected animal
-        val description = "The lion is a large carnivorous feline known for its majestic mane." // Replace with the animal's description
+        val animalName = "Antilope"
+        val description = "An antelope is a group of herbivorous mammals belonging to the family Bovidae."
 
-        animalTitle.text = animalName
+        nameTextView.text = animalName
         animalDescription.text = description
 
         // Set a click listener for the "Block Animal" button
         blockAnimalButton.setOnClickListener(View.OnClickListener {
-            // Save the blocked animal (you can implement this logic)
-            // For example, you can store the blocked animals in SharedPreferences or a database
-            // Here, we'll just display a toast message
-            // Toast.makeText(this, "Animal '$animalName' blocked!", Toast.LENGTH_SHORT).show()
 
             // Redirect to the ActivityManageBlock
             val intent = Intent(this, ManageBlockActivity::class.java)
             startActivity(intent)
         })
+
+        // Get a reference to the ImageButton
+        val backButton: ImageButton = findViewById(R.id.backButton)
+
+        // Set a click listener for the ImageButton
+        backButton.setOnClickListener {
+            // Redirect to the AnimalNamesActivity when the ImageButton is clicked
+            val intent = Intent(this, AnimalNamesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
