@@ -7,10 +7,8 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Button
-import com.example.gipolananimalmidterm.databinding.ActivityAnimalNamesBinding
 
 class AnimalNamesActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAnimalNamesBinding
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,10 +17,10 @@ class AnimalNamesActivity : AppCompatActivity() {
         // Get a reference to the ListView
         val nameListView: ListView = findViewById(R.id.nameListView)
 
-        // Define a list of animal names (replace with your data)
+        // Define a list of animal names
         val animalNames = arrayOf("Antilope", "Bear", "Cat", "Dog", "Elephant", "Fox", "Grasshopper")
 
-        // Create an ArrayAdapter to display the animal names
+        // To display the animal names
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, animalNames)
 
         // Set the adapter for the ListView

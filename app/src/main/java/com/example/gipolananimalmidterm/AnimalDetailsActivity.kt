@@ -7,10 +7,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.content.Intent
 import android.widget.ImageButton
-import com.example.gipolananimalmidterm.databinding.ActivityAnimalNamesBinding
 
 class AnimalDetailsActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAnimalNamesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animal_details)

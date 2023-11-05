@@ -21,7 +21,7 @@ class ManageBlockActivity : AppCompatActivity() {
         // Define a list of blocked animal names
         val blockedAnimalNames = mutableListOf("Antilope")
 
-        // Create a custom adapter to display the blocked animal names with an "Unblock" button
+        // To display the blocked animal names with an "Unblock" button
         val adapter = BlockedAnimalAdapter(this, blockedAnimalNames)
 
         // Set the adapter for the ListView
